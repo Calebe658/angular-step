@@ -1,0 +1,15 @@
+<ul>
+    <div *ngFor="let item of lista">
+        <li *ngIf="item >= 500">
+            {{item | currency:"BRL"}}
+        </li>
+    </div>
+</ul>
+
+<p [ngClass]="{ 'active': isActive, 'inactive': !isActive }">
+    Exemplo para ser usado de teste.
+</p>
+
+<button (click)="trocarCor()">
+    Trocar cor
+</button>

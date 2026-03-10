@@ -1,19 +1,13 @@
-<!--
-{{titulo}}
+<nav>
+        <a routerLink="/">Home</a>
 
-{{numero * 0.1}}
+        <a routerLink="/dashboard">Dashboard</a>
 
-{{arrowFunction("Exemplo de arrowFunction!")}}
+        <a routerLink="/rotas">Rotas</a>
 
-{{funcao("Exemplo de função normal!")}} 
--->
+        <a routerLink="/painel-adm">Painel adm</a>
+        
+        <a routerLink="/frete">Frete</a>
+</nav>
 
-{{numero1 | number}} <br>
-
-{{valorMercadoria | currency: "USD"}} <br>
-
-{{data | date:'dd/MM/yyyy'}} <br>
-
-{{palavra | lowercase}} <br>
-
-{{palavra | uppercase}}
+<router-outlet></router-outlet>
