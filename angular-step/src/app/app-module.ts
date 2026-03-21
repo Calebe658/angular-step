@@ -12,10 +12,12 @@ import { Dashboard } from './componentes/dashboard/dashboard';
 import { Rotas } from './componentes/rotas/rotas';
 import { PainelAdm } from './componentes/painel-adm/painel-adm';
 import { Frete } from './componentes/frete/frete';
+import { Tabela } from './tabela/tabela';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
-  declarations: [App, Exemplo1, Exemplo2, Exemplo3, Dashboard, Rotas, PainelAdm, Frete],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatButtonModule],
+  declarations: [App, Exemplo1, Exemplo2, Exemplo3, Dashboard, Rotas, PainelAdm, Frete, Tabela],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatButtonModule, MatTableModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
