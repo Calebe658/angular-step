@@ -15,8 +15,8 @@ import { Frete } from './componentes/frete/frete';
 import { MatTableModule } from '@angular/material/table';
 import { Posts } from './posts/posts';
 import { Tabela } from './tabela/tabela';
-import { MapaComponent } from './componentes/mapa/mapa.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { Detalhes } from './componentes/detalhes/detalhes';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     Frete,
     Posts,
     Tabela,
+    Detalhes,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatButtonModule,
     MatTableModule,
     GoogleMapsModule,
-    MapaComponent,
   ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
