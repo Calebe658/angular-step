@@ -5,7 +5,8 @@ import { Dashboard } from "./componentes/dashboard/dashboard";
 import { Rotas } from "./componentes/rotas/rotas";
 import { PainelAdm } from "./componentes/painel-adm/painel-adm";
 import { Frete } from "./componentes/frete/frete";
-import { Tabela } from './tabela/tabela';
+import { Posts } from './posts/posts';
+import { MapaComponent } from './componentes/mapa/mapa.component';
 
 const routes: Routes = [
   { path: 'exemplo1', component: Exemplo1 },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'rotas', component: Rotas },
   { path: 'painel-adm', component: PainelAdm },
   { path: 'frete', component: Frete },
-  { path: 'tabela', component: Tabela }
+  { path: 'posts', component: Posts },
+  { path: 'mapa', component: MapaComponent },
 ];
 
 @NgModule({

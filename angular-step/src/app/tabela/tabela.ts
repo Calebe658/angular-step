@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { UserService } from '../userservice'
+import { Component, Input } from '@angular/core';
 
-export interface PeriodicElement {
+export interface Post {
   userId: number;
   id: number;
   title: number;
@@ -9,23 +8,19 @@ export interface PeriodicElement {
 }
 
 @Component({
-  selector: 'app-tabela',
+  selector: 'tabela',
   standalone: false,
   templateUrl: './tabela.html',
   styleUrl: './tabela.css',
-  changeDetection: ChangeDetectionStrategy.Eager
 })
+export class Tabela {
+  @Input() data: Post[] = [];
 
-export class Tabela implements OnInit {
-  users: PeriodicElement[] = [];
+  constructor() {
 
-  constructor(private userService: UserService) { }
-
-  ngOnInit() {
-    this.getPosts();
   }
 
-  getPosts() {
-    return this.userService.getUsers().subscribe((data: PeriodicElement[]) => this.users = data)
+  ngOnInit() {
+
   }
 }

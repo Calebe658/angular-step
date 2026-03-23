@@ -12,12 +12,35 @@ import { Dashboard } from './componentes/dashboard/dashboard';
 import { Rotas } from './componentes/rotas/rotas';
 import { PainelAdm } from './componentes/painel-adm/painel-adm';
 import { Frete } from './componentes/frete/frete';
+import { MatTableModule } from '@angular/material/table';
+import { Posts } from './posts/posts';
 import { Tabela } from './tabela/tabela';
-import {MatTableModule} from '@angular/material/table';
+import { MapaComponent } from './componentes/mapa/mapa.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
-  declarations: [App, Exemplo1, Exemplo2, Exemplo3, Dashboard, Rotas, PainelAdm, Frete, Tabela],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, MatCardModule, MatButtonModule, MatTableModule],
+  declarations: [
+    App,
+    Exemplo1,
+    Exemplo2,
+    Exemplo3,
+    Dashboard,
+    Rotas,
+    PainelAdm,
+    Frete,
+    Posts,
+    Tabela,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatTableModule,
+    GoogleMapsModule,
+    MapaComponent,
+  ],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
