@@ -11,7 +11,7 @@ export class PostsService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers(): Observable<any[]> {
+  getPosts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
 }

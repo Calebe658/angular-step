@@ -16,15 +16,22 @@ export interface Post {
 })
 
 export class Posts {
-  users: Post[] = [];
+  posts: any[] = [];
 
-  constructor(private postService: PostsService) { }
+  constructor(public postsService: PostsService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.getPosts();
   }
 
-  getPosts() {
-    return this.postService.getUsers().subscribe((data: Post[]) => this.users = data)
+  getPosts(): void {
+    this.postsService.getPosts().subscribe(
+      (response: any) => {
+        this.posts = response
+      },
+      (error: any) => {
+        console.error(error);
+      }
+    );
   }
 }

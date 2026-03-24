@@ -2,6 +2,6 @@
     <li *ngFor="let item of data">
         {{item.title}};
 
-        <button>Detalhes</button>
+        <button (click)="getDetalhes(item.id)">Detalhes</button>
     </li>
 </ul>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface Post {
   userId: number;
@@ -16,11 +17,15 @@ export interface Post {
 export class Tabela {
   @Input() data: Post[] = [];
 
-  constructor() {
+  constructor(private router: Router) {
 
   }
 
   ngOnInit() {
 
+  }
+
+  getDetalhes(id: any) {
+    this.router.navigate(['/detalhes', id])
   }
 }
