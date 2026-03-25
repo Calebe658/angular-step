@@ -17,6 +17,9 @@ import { Posts } from './posts/posts';
 import { Tabela } from './tabela/tabela';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { Detalhes } from './componentes/detalhes/detalhes';
+import { Admin } from './admin/admin';
+import { Usuarios } from './usuarios/usuarios';
+import { Configuracoes } from './configuracoes/configuracoes';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { Detalhes } from './componentes/detalhes/detalhes';
     Posts,
     Tabela,
     Detalhes,
+    Admin,
+    Usuarios,
+    Configuracoes,
   ],
   imports: [
     BrowserModule,

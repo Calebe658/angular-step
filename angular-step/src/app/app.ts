@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ import { Component } from '@angular/core';
 export class App {
   titulo: string = "Olá, mundo!";
   numero: number = 10;
+
+  constructor(private router: Router) { }
 
   arrowFunction = (parametro: string) => {
     return parametro;
@@ -22,4 +25,12 @@ export class App {
   data: string = "2024-07-08";
   valorMercadoria: number = 180.25;
   palavra: string = "Olá!";
+
+  irParaFrete() {
+    this.router.navigate(['/frete'], { queryParams: { categoria: 'teclados', precoMax: 500 } });
+  }
+
+  irParaPainel() {
+    this.router.navigate(['/painel-adm'], { state: { usuario: 'Carlos', nivel: 'admin' } });
+  }
 }

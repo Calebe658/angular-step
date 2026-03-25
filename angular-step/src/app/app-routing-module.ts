@@ -7,6 +7,9 @@ import { PainelAdm } from "./componentes/painel-adm/painel-adm";
 import { Frete } from "./componentes/frete/frete";
 import { Posts } from './posts/posts';
 import { Detalhes } from './componentes/detalhes/detalhes';
+import { Admin } from './admin/admin';
+import { Usuarios } from './usuarios/usuarios';
+import { Configuracoes } from './configuracoes/configuracoes';
 
 const routes: Routes = [
   { path: 'exemplo1', component: Exemplo1 },
@@ -16,6 +19,14 @@ const routes: Routes = [
   { path: 'frete', component: Frete },
   { path: 'posts', component: Posts },
   { path: 'detalhes/:id', component: Detalhes },
+  {
+    path: 'admin',
+    component: Admin,
+    children: [
+      { path: 'usuarios', component: Usuarios },
+      { path: 'configuracoes', component: Configuracoes }
+    ]
+  }
 ];
 
 @NgModule({

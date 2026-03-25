@@ -5,11 +5,17 @@
 
         <a routerLink="/rotas">Rotas</a>
 
-        <a routerLink="/painel-adm">Painel adm</a>
+        <a (click)="irParaPainel()">Painel adm</a>
 
         <a routerLink="/frete">Frete</a>
 
         <a routerLink="/posts">Posts</a>
+
+        <button (click)="irParaFrete()">Frete</button>
+
+        <a routerLink="/admin/usuarios">Painel Administrativo - Usuários</a>
+
+        <a routerLink="/admin/configuracoes">Painel Administrativo - Configurações</a>
 </nav>
 
 <router-outlet></router-outlet>
